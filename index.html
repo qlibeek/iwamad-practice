@@ -4,145 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alibek's Profile</title>
+
+    <title>Alibek's Profile Card</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-    <header>
-        <h1>Alibek Burakhanov</h1>
-        <p>Aspiring Web Developer</p>
-    </header>
+<header>
+    <h1>Alibek Burakhanov</h1>
+    <p>Aspiring Web Developer</p>
+</header>
 
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#goals">Goals</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<main class="flex justify-center p-5">  
+
+    <section class="card bg-white p-6 border-2 border-gray-300 rounded-xl m-5 max-w-2xl">
+
+        <div class="profile flex items-center gap-6">
+
+            <img
+            width = "200" 
+            src="photo_2026-09-08_14-48-38.jpg"
+            alt="Alibek profile avatar">
 
 
-    <main>
+            <div class="info">
 
-        <section id="about">
-            <h2>About Me</h2>
+                <h2>About Me</h2>
 
-            <img src="photo_2026-09-08_14-48-38.jpg" 
-                 alt="Alibek profile avatar"
-                 width="200">
-
-            <p>
-                My name is Alibek Burakhanov. I am a student of ITM specialty, and i want to learn web development.
-                During this course, I want to improve my HTML, CSS, and JavaScript skills 
-                and learn how to create websites.
-            </p>
-        </section>
+                <p>
+                    My name is Alibek Burakhanov.
+                    I am an ITM student interested in web development.
+                    I want to improve my HTML, CSS and JavaScript skills
+                    and learn how to create websites.
+                </p>
 
 
+                <div class="links">
 
-        <section id="skills">
-
-            <h2>My Skills</h2>
-
-            <ul>
-                <li>Problem solving</li>
-                <li>Teamwork</li>
-                <li>Communication skills</li>
-            </ul>
-
-        </section>
+                    <a href="mailto:burakhanovalibek@gmail.com">
+                        Email
+                    </a>
 
 
+                    <a href="https://github.com/qlibeek">
+                        GitHub
+                    </a>
+                    <button id="likeButton">
+                        ♡ Like
+                    </button>
+
+                </div>
 
 
-        <section id="goals">
+            </div>
 
-            <h2>My Goals</h2>
+        </div>
 
-            <table border="1">
 
-                <tr>
-                    <th>Skill</th>
-                    <th>Current Level</th>
-                </tr>
+    </section>
 
-                <tr>
-                    <td>HTML</td>
-                    <td>Beginner</td>
-                </tr>
 
-                <tr>
-                    <td>CSS</td>
-                    <td>Beginner</td>
-                </tr>
-
-                <tr>
-                    <td>JavaScript</td>
-                    <td>Beginner</td>
-                </tr>
-
-            </table>
-
-        </section>
+</main>
 
 
 
+<footer>
 
-        <section id="contact">
+    <p>
+        2026 Alibek Burakhanov
+    </p>
 
-            <h2>Contact</h2>
+</footer>
 
-            <p>
-                Email:
-                <a href="mailto:burakhanovalibek@gmal.com">
-                    burakhanovalibek@gmal.com
-                </a>
-            </p>
-
-
-            <form>
-
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name">
-
-                <br><br>
-
-
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email">
-
-                <br><br>
-
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea>
-
-                <br><br>
-
-
-                <button type="submit">
-                    Submit
-                </button>
-
-            </form>
-
-        </section>
-
-
-    </main>
-
-
-
-    <footer>
-
-        <p>
-            2026 Alibek Burakhanov
-        </p>
-
-    </footer>
-
-
+<script src="script.js"></script>
 </body>
 
 </html>
