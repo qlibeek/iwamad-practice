@@ -1,0 +1,138 @@
+/* General page style */
+
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: #96a6b6;
+
+    margin: 0;
+}
+
+
+/* Header */
+
+header {
+
+    text-align: center;
+    padding: 20px;
+
+}
+
+
+/* Profile card */
+
+.card {
+
+
+}
+
+
+/* Flexbox layout */
+
+.profile {
+
+    
+}
+
+
+
+.profile img {
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+}
+
+
+
+.info {
+
+    flex: 1;
+
+}
+
+
+
+.links {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+
+
+.links a {
+
+    text-decoration: none;
+
+    color: blue;
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+
+
+/* Responsive design */
+
+@media (max-width: 600px) {
+
+
+    .profile {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .links {
+
+        justify-content: center;
+
+    }
+
+
+}
+#likeButton {
+
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background-color: #333;
+
+    color: white;
+
+}
+
+
+.liked {
+
+    background-color: rgb(239, 155, 155);
+
+}
