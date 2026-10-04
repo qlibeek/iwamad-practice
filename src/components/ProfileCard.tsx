@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import LikeButton from './LikeButton'
 import SkillItem from './SkillItem'
 
 type Skill = {
@@ -23,27 +23,20 @@ function ProfileCard({
   image,
   skills,
 }: ProfileCardProps) {
-
-  const [liked, setLiked] = useState(false)
-
   return (
-    <section className={`card ${liked ? 'liked' : ''}`}>
-
+    <section className="card">
       <div className="profile">
-
         <img
           src={image}
           alt={`${name} profile avatar`}
         />
 
         <div className="info">
-
           <h2>{name}</h2>
 
           <p>{bio}</p>
 
           <div className="links">
-
             <a href={`mailto:${email}`}>
               Email
             </a>
@@ -55,7 +48,6 @@ function ProfileCard({
             >
               GitHub
             </a>
-
           </div>
 
           <h3>My Skills</h3>
@@ -73,17 +65,9 @@ function ProfileCard({
             <p>No skills added yet.</p>
           )}
 
-          <button
-            type="button"
-            onClick={() => setLiked(!liked)}
-          >
-            {liked ? '♥ Liked' : '♡ Like'}
-          </button>
-
+          <LikeButton />
         </div>
-
       </div>
-
     </section>
   )
 }

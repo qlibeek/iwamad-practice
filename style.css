@@ -84,3 +84,20 @@ button {
     }
 
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+}
+
+nav a.active {
+    color: blue;
+    font-weight: bold;
+}

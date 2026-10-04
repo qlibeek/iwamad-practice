@@ -1,9 +1,12 @@
 import '../style.css'
 
-import Header from './components/Header'
-import ProfileCard from './components/ProfileCard'
-import Footer from './components/Footer'
+import { Route, Routes } from 'react-router'
 
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
+import SkillsPage from './pages/SkillsPage'
+import ContactPage from './pages/ContactPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 type Skill = {
   id: number
@@ -11,7 +14,6 @@ type Skill = {
 }
 
 function App() {
-
   const skills: Skill[] = [
     {
       id: 1,
@@ -28,30 +30,50 @@ function App() {
   ]
 
   return (
-    <>
-      <Header
-        name="Alibek Burakhanov"
-        subtitle="Aspiring Web Developer"
-      />
-
-      <main>
-
-        <ProfileCard
-          name="Alibek Burakhanov"
-          bio="My name is Alibek Burakhanov. I am an ITM student interested in web development. I want to improve my HTML, CSS and JavaScript skills and learn how to create modern websites."
-          email="burakhanovalibek@gmail.com"
-          github="https://github.com/qlibeek"
-          image="profile.jpg"
-          skills={skills}
+    <Routes>
+      <Route
+        element={
+          <Layout
+            name="Alibek Burakhanov"
+            subtitle="Aspiring Web Developer"
+            year={2026}
+          />
+        }
+      >
+        <Route
+          index
+          element={
+            <HomePage
+              name="Alibek Burakhanov"
+              bio="My name is Alibek Burakhanov. I am an ITM student interested in web development. I want to improve my HTML, CSS and JavaScript skills and learn how to create modern websites."
+              email="burakhanovalibek@gmail.com"
+              github="https://github.com/qlibeek"
+              image={`${import.meta.env.BASE_URL}profile.jpg`}
+              skills={skills}
+            />
+          }
         />
 
-      </main>
+        <Route
+          path="skills"
+          element={<SkillsPage skills={skills} />}
+        />
 
-      <Footer
-        year={2026}
-        name="Alibek Burakhanov"
-      />
-    </>
+        <Route
+          path="contact"
+          element={
+            <ContactPage email="burakhanovalibek@gmail.com" />
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <NotFoundPage message="The page you are looking for does not exist." />
+          }
+        />
+      </Route>
+    </Routes>
   )
 }
 
