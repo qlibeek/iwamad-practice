@@ -1,3 +1,4 @@
+import logo from '../assets/logo.svg'
 import { NavLink } from 'react-router'
 import { useLikes } from '../context/LikesContext'
 
@@ -11,6 +12,11 @@ function Header({ name, subtitle }: HeaderProps) {
 
   return (
     <header>
+      <img
+        src={logo}
+        alt="Alibek logo"
+        className="site-logo"
+      />
       <h1>{name}</h1>
       <p>{subtitle}</p>
 

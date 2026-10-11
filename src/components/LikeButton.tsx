@@ -1,4 +1,5 @@
 import { useLikes } from '../context/LikesContext'
+import Button from './ui/Button'
 
 type LikeButtonProps = {
   className?: string
@@ -8,13 +9,13 @@ function LikeButton({ className }: LikeButtonProps) {
   const { likes, addLike } = useLikes()
 
   return (
-    <button
-      type="button"
+    <Button
+      variant="primary"
       className={className}
       onClick={addLike}
     >
       ♥ {likes}
-    </button>
+    </Button>
   )
 }
 

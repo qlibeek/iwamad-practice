@@ -101,3 +101,75 @@ nav a.active {
     color: blue;
     font-weight: bold;
 }
+.ui-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+}
+
+.ui-button {
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+}
+
+.ui-button-primary {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.ui-button-secondary {
+    background: var(--color-surface);
+    color: var(--color-primary);
+}
+
+.ui-tag {
+    display: inline-block;
+    padding: var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+}
+
+.ui-button:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+.site-logo {
+    width: 48px;
+    height: 48px;
+}
+
+header {
+    padding: var(--space-4);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin: var(--space-4) 0;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: var(--space-2);
+}
+
+nav a.active {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--space-4);
+    }
+}

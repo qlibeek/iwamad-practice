@@ -1,4 +1,5 @@
-import SkillItem from '../components/SkillItem'
+import SkillBadge from '../components/SkillBadge'
+import Card from '../components/ui/Card'
 
 type Skill = {
   id: number
@@ -11,22 +12,21 @@ type SkillsPageProps = {
 
 function SkillsPage({ skills }: SkillsPageProps) {
   return (
-    <section className="card">
+    <Card>
       <h2>My Skills</h2>
 
       {skills.length > 0 ? (
         <ul>
           {skills.map((skill) => (
-            <SkillItem
-              key={skill.id}
-              skill={skill}
-            />
+            <li key={skill.id}>
+              <SkillBadge skill={skill.name} />
+            </li>
           ))}
         </ul>
       ) : (
         <p>No skills added yet.</p>
       )}
-    </section>
+    </Card>
   )
 }
 

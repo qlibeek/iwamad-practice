@@ -1,5 +1,6 @@
 import LikeButton from './LikeButton'
-import SkillItem from './SkillItem'
+import SkillBadge from './SkillBadge'
+import Card from './ui/Card'
 
 type Skill = {
   id: number
@@ -24,7 +25,7 @@ function ProfileCard({
   skills,
 }: ProfileCardProps) {
   return (
-    <section className="card">
+    <Card>
       <div className="profile">
         <img
           src={image}
@@ -55,10 +56,9 @@ function ProfileCard({
           {skills.length > 0 ? (
             <ul>
               {skills.map((skill) => (
-                <SkillItem
-                  key={skill.id}
-                  skill={skill}
-                />
+                <li key={skill.id}>
+                  <SkillBadge skill={skill.name} />
+                </li>
               ))}
             </ul>
           ) : (
@@ -68,7 +68,7 @@ function ProfileCard({
           <LikeButton />
         </div>
       </div>
-    </section>
+    </Card>
   )
 }
 
