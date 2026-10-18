@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage'
 import SkillsPage from './pages/SkillsPage'
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
+import RegisterPage from './pages/RegisterPage'
 
 type Skill = {
   id: number
@@ -70,6 +71,12 @@ function App() {
           path="*"
           element={
             <NotFoundPage message="The page you are looking for does not exist." />
+          }
+        />
+        <Route 
+          path="register" 
+          element={
+            <RegisterPage />
           }
         />
       </Route>

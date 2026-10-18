@@ -32,6 +32,9 @@ function Header({ name, subtitle }: HeaderProps) {
         <NavLink to="/contact">
           Contact
         </NavLink>
+        <NavLink to="/register">
+          Register
+        </NavLink>
       </nav>
 
       <p>♥ Likes: {likes}</p>
