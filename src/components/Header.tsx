@@ -35,6 +35,9 @@ function Header({ name, subtitle }: HeaderProps) {
         <NavLink to="/register">
           Register
         </NavLink>
+        <NavLink to="/events">
+          Events
+        </NavLink>
       </nav>
 
       <p>♥ Likes: {likes}</p>

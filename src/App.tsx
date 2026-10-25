@@ -8,6 +8,8 @@ import SkillsPage from './pages/SkillsPage'
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
 import RegisterPage from './pages/RegisterPage'
+import EventsPage from './pages/EventsPage'
+import EventDetailsPage from './pages/EventDetailsPage'
 
 type Skill = {
   id: number
@@ -79,6 +81,8 @@ function App() {
             <RegisterPage />
           }
         />
+        <Route path="events" element={<EventsPage />} />
+        <Route path="events/:eventId" element={<EventDetailsPage />} />
       </Route>
     </Routes>
   )
